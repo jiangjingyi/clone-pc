@@ -1,0 +1,13 @@
+ja:
+  activerecord:
+    attributes:
+      pc:
+        PC_NUM: 「Pcのシリアル番号」
+        PC_TYPE: 「Pcの型番」
+        PC_NANE: 「Pcの名前」
+      user:
+        name: 名前
+        current_password: "現在のパスワード"
+        password: パスワード
+        email: メールアドレス
+       

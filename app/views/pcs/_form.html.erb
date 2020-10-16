@@ -1,0 +1,39 @@
+<%= form_with(model:pc, local: true,class:"m-3") do |form| %> 
+
+<div class="form-group">
+  <%= form.label :PCのシリアル番号 %> 
+  <div class="caption">
+    <%= form.label :★半角英数字と記号 %>
+  </div>
+  <%= form.text_field :PC_NUM ,class:"form-control" %>
+  <% if pc.errors.include?(:PC_NUM) %>
+       <p style="color: red;"><%= pc.errors.full_messages_for(:PC_NUM).first %>
+  <% end %>
+</div>
+
+<div class="form-group">
+  <%= form.label :PCの型番 %> 
+  <div class="caption">
+    <%= form.label :★半角英数字と記号 %>
+  </div>
+  <%= form.text_field :PC_TYPE ,class:"form-control" %>
+  <% if pc.errors.include?(:PC_TYPE) %>
+       <p style="color: red;"><%= pc.errors.full_messages_for(:PC_TYPE).first %>
+     <% end %>
+</div>
+
+<div class="form-group">
+  <%= form.label :PCの名前 %> <%= form.text_field :PC_NANE ,class:"form-control" %>
+  <% if pc.errors.include?(:PC_NANE) %>
+       <p style="color: red;"><%= pc.errors.full_messages_for(:PC_NANE).first %>
+     <% end %>
+</div>
+<% if local_assigns[:new_flag].present? %>
+  <%= form.submit "登録",class:"btn btn-primary float-right",
+    data: { confirm: 'このデータを登録しますが、よろしいでしょうか?' }%>
+<%else%>
+  <%= form.submit "更新", class:"btn btn-primary float-right",
+    data: { confirm: 'このデータを更新しますが、よろしいでしょうか?' }%>
+<% end%>
+
+<% end %>

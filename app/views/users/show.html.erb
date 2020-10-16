@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="jumbotron" >
+    <h1 class="ml-1">ユーザー情報</h1>
+  </div>
+  <div style="margin-left: 40%;">  
+    <p class="m-3" id="notice"><%= notice %></p>
+    <p class="m-3" style="padding-bottom:2%;">
+      <strong>Name:</strong>
+      <%= @user.name %>
+    </p>
+    <p class="m-3" style="padding-bottom:2%;">
+      <strong>Profile:</strong>
+      <%= @user.profile %>
+    </p>
+</div>
+<div style="margin-left: 40%;">
+  <%= link_to '編集', edit_user_registration_path %> |
+  <%= link_to '一覧画面に戻る', pcs_path %>
+</div>
+</div>

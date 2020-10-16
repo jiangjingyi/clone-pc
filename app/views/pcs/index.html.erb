@@ -1,0 +1,54 @@
+<div class="container">       
+    <div class="jumbotron mb-3">
+        <div class="float-right" style="padding-left: 60%;padding-bottom:2%;">
+        <% if user_signed_in? %>
+        <h4 class="text-primary bg-info">ようこそ、<%= current_user.name%> さん</h4>
+        <div class="bg-info">
+        <%= link_to "プロフィール", user_path(current_user.id) ,class:"text-black-50 "%> |
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete,class:"text-black-50" %>
+        </div>
+        <% end %>
+        </div>
+        <h1 class="ml-1">Pc一覧</h1>
+        <p id="notice"><%= notice %></p>
+        <div class="mr-1" style="margin:10px;">
+            <%= link_to(new_pc_path) do%>
+                <button class="btn btn-primary float-right">新規追加</button>
+            <%end%>
+        </div>
+    </div>
+    <!-- 検索フォーム -->
+    <div class="search-form-container">
+
+    </div>
+    <!-- 一覧表示 -->
+    <div class="pc-container mt-3">
+        <table class="table table-hover"  width="75%" >
+            <thead class="thead-light">
+                <tr>
+                    <th class="nowrap" width="15%">No</th>
+                    <th class="nowrap" width="25%">シリアル番号</th>
+                    <th class="nowrap" width="20%">型番</th>
+                    <th class="nowrap" width="20%">名前</th>
+                    <th class="nowrap" width="10%"></th>
+                    <th class="nowrap" width="10%"></th>
+                </tr>
+                <% @pcs.each do |pc| %>
+                <tr>
+                    <td class="nowrap" width="10%"><%= pc.ITEM_NUM %></td>
+                    <td class="wrap" width="20%"><%= pc.PC_NUM %></td>
+                    <td class="wrap" width="20%"><%= pc.PC_TYPE %></td>
+                    <td class="wrap" width="15%"><%= pc.PC_NANE %></td>                    
+                    <td width="15%">
+                        <%= link_to (edit_pc_path(pc.ITEM_NUM)), method: :get do%>
+                            <button class="btn btn-secondary text-nowrap">変更</button>
+                        <% end %>
+                    </td>
+                    <td></td>
+                </tr>
+                <% end %>
+            </thead>
+        </table>
+        
+    </div>
+</div>

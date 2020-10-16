@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="jumbotron" >
+        <div class="float-right" style="padding-left: 35%;padding-bottom:2%;">
+            <% if user_signed_in? %>
+            <h4 class="text-primary bg-info">会員ID：<%= current_user.id%></h4>
+            <div class="bg-info">
+            <%= link_to "プロフィール", user_path(current_user.id) ,class:"text-black-50 "%> |
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete,class:"text-black-50" %>
+            </div>
+            <% end %>
+            </div>
+        <h1 class="ml-1">PC新規登録画面</h1>
+    </div>
+        <%= render 'form', pc: @pc, new_flag: true %>        
+        <%= link_to(pcs_path) do%>
+            <button class="btn btn-default bg-secondary text-light mr-1 float-left">戻る</button>
+        <%end%>
+</div>
