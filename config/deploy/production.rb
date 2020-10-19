@@ -61,7 +61,7 @@
 #   }
 
 server '52.192.168.187', user: 'ec2-user', roles: %w{web db app}
-ssh_options: {
+set:ssh_options, {
     port: 3000,
     user: "ec2-user", # overrides user setting above
     keys: %w(~/.ssh/asai.pem),
