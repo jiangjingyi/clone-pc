@@ -1,5 +1,4 @@
-#10/19
-=begin app_path = File.expand_path('../../', __FILE__)
+app_path = File.expand_path('../../', __FILE__)
 
 #アプリケーションサーバの性能を決定する
 worker_processes 1
@@ -52,4 +51,4 @@ end
 
 after_fork do |_server, _worker|
   defined?(ActiveRecord::Base) && ActiveRecord::Base.establish_connection
-end =end
+end
