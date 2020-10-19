@@ -47,8 +47,16 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+#ローカルの設定
+#production:
+# <<: *default
+#  database: hoge_production
+#  username: hoge
+#  password: <%= ENV['HOGE_DATABASE_PASSWORD'] %>
+
 production:
   <<: *default
-  database: hoge_production
-  username: hoge
-  password: <%= ENV['HOGE_DATABASE_PASSWORD'] %>
+  database: <%= Rails.application.credentials.db[:database] %>
+  username: <%= Rails.application.credentials.db[:username] %>
+  password: <%= Rails.application.credentials.db[:password] %>
+  socket: <%= Rails.application.credentials.db[:socket] %>
