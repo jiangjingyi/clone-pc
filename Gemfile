@@ -71,11 +71,3 @@ gem 'data-confirm-modal'
 gem 'devise'
 gem 'pry-rails'
 gem 'unicorn', '5.4.1'
-
-group :development, :test do
-  gem 'capistrano'
-  gem 'capistrano-rbenv'
-  gem 'capistrano-bundler'
-  gem 'capistrano-rails'
-  gem 'capistrano3-unicorn'
-end
