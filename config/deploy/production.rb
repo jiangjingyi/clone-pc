@@ -61,7 +61,8 @@
 #   }
 
 #10/19
-=begin server '52.192.168.187', user: 'ec2-user', roles: %w{web db app}
+server '18.182.249.238', user: 'ec2-user', roles: %w{app db web}
+=begin 
 set:ssh_options, {
     port: 3000,
     user: "ec2-user", # overrides user setting above
