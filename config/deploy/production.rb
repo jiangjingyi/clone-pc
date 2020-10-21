@@ -62,10 +62,3 @@
 
 #10/19
 server '18.182.249.238', user: 'ec2-user', roles: %w{app db web}
-=begin 
-set:ssh_options, {
-    port: 3000,
-    user: "ec2-user", # overrides user setting above
-    keys: %w(~/.ssh/asai.pem),
-    forward_agent: true
-} =end
