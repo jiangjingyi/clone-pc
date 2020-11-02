@@ -1,0 +1,251 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed"
+				data-toggle="collapse" data-target="#navbarEexample">
+				<span class="sr-only">Toggle navigation</span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"> <i class="fas fa-calculator"></i>
+				経費精算
+			</a>
+		</div>
+
+		<div class="collapse navbar-collapse" id="navbarEexample">
+			<ul class="nav navbar-nav">
+				<li><a href="#">ホーム</a></li>
+
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown"><a href="#" class="dropdown-toggle"
+					data-toggle="dropdown" role="button">田中一郎 <span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="#">ここにリンク</a></li>
+						<li><a href="#">ここにリンク</a></li>
+						<li><a href="#">ログアウト</a></li>
+					</ul></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<nav>
+	<div></div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="col-md-6 col-md-offset-3">
+					<div class="panel panel-default company-and-name">
+						<div class="panel-body">
+							<span class="glyphicon glyphicon-briefcase icon-red large-font"
+								aria-hidden="true"></span> <span class="large-font">&nbsp<label>チーム名：</label>エイ・クリエイション
+							</span> <br> <span
+								class="glyphicon glyphicon-user icon-red large-font"
+								aria-hidden="true"></span> <span class="large-font">&nbsp<label>氏名：</label>田中一郎
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr class="top-hr">
+			<div class="col-md-12">
+				<div class="text-right">
+					<button class="btn btn-info new"  data-toggle="modal" data-target="#sampleModal">
+						<span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+						新規精算作成
+					</button>
+				</div>
+			</div>
+			<!-- モーダル・ダイアログ -->
+<div class="modal fade" id="sampleModal" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+				<h4 class="modal-title">精算新規作成</h4>
+			</div>
+			<div class="modal-body">
+        <div class="col-md-12"></div>
+        <p>作成する精算期間を選択してください</p>
+        <div class="input-group date" id="datepicker3">
+                    <div class="input-group-addon">from</div>
+										<input type="text" class="form-control">
+									</div>
+
+									<div class="input-group date" id="datepicker4">
+                    <div class="input-group-addon">to</div>
+										<input type="text" class="form-control">
+										
+									</div>
+        <br><br>
+			</div>
+			
+      <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">戻る</button>
+				<button type="button" class="btn btn-info">作成</button>
+			</div>
+		</div>
+	</div>
+</div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-heading panel-header-custom">
+						<p class="text-center white-font">精算履歴</p>
+					</div>
+					<div class="panel-body">
+						<div class="com-md-12">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<div class="com-md-12">
+										<label class="filter-text"><i class="fas fa-filter"></i>フィルタ</label>
+									</div>
+
+									<div class="checklabel">
+										<label>状態</label> <label class="checkbox-inline"> <input
+											type="checkbox" value="checkboxA"> 保存
+										</label> <label class="checkbox-inline"> <input
+											type="checkbox" value="checkboxB"> 申請中
+										</label> <label class="checkbox-inline"> <input
+											type="checkbox" value="checkboxB"> 申請済み
+										</label> <label class="checkbox-inline"> <input
+											type="checkbox" value="checkboxB"> 承認済み
+										</label>
+									</div>
+									<div class="checklabel">
+										<label>期間</label>
+									</div>
+									<div class="input-group date" id="datepicker">
+                    <div class="input-group-addon">from</div>
+										<input type="text" class="form-control">
+									</div>
+
+									<div class="input-group date" id="datepicker2">
+                    <div class="input-group-addon">to</div>
+										<input type="text" class="form-control">
+										
+									</div>
+									<button class="btn btn-default">
+                    	
+
+<span class="glyphicon glyphicon-search" aria-hidden="true"></span>検索</button>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<ul class="pagination">
+								<li><a href="#" aria-label="前のページへ"> <span
+										aria-hidden="true">前</span>
+								</a></li>
+								<li><a href="#">1</a></li>
+								<li class="active"><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#">5</a></li>
+								<li><a href="#" aria-label="次のページへ"> <span
+										aria-hidden="true">次</span>
+								</a></li>
+							</ul>
+						</div>
+						<div class="col-md-12">
+							<table class="table table-striped">
+								<thead>
+									<tr>
+                   
+										<th>申請番号</th>
+										<th>状態</th>
+										<th>申請日</th>
+										<th>合計金額</th>
+										<th>期間(from)</th>
+										<th>期間(to)</th>
+										<th>更新日</th>
+										<th></th>
+                   
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th>5</th>
+										<td><div class="orange">保存</div></td>
+										<td></td>
+										<td><div class="right">￥1,500</div></td>
+										<td>2019/10/01</td>
+										<td>2019/10/31</td>
+										<td>2019/10/29 23:30:11</td>
+										<td><a href="#"><i class="fas fa-edit icon-red"></i></a></td>
+									</tr>
+									<tr>
+										<th>4</th>
+										<td><div class="icon-red">申請中</div></td>
+										<td>2019/10/01</td>
+										<td><div class="right">￥1,500</div></td>
+										<td>2019/10/31</td>
+										<td>2019/10/29</td>
+										<td>2019/10/29 20:00:00</td>
+										<td><a href="#"><i class="fas fa-edit icon-red"></i></a></td>
+									</tr>
+									<tr>
+										<th>3</th>
+										<td><div class="green">申請済み</div></td>
+										<td>2020/03/30</td>
+										<td><div class="right">¥5,000</div></td>
+										<td>2020/03/01</td>
+										<td>2020/03/31</td>
+										<td>2020/03/30 18:23:34</td>
+										<td><i class="fas fa-edit icon-red"></td>
+									</tr>
+									<tr>
+										<th>2</th>
+										<td><div class="blue">承認済み</div></td>
+										<td>2020/04/30</td>
+										<td><div class="right">¥3,000</div></td>
+										<td>2020/04/01</td>
+										<td>2020/04/30</td>
+										<td>2020/05/30 15:00:00</td>
+										<td><a href="#"><i
+												class="fas fa-info-circle icon-red"></i></a></td>
+									</tr>
+									<tr>
+										<th>1</th>
+										<td><div class="blue">承認済み</div></td>
+										<td>2020/05/29</td>
+										<td><div class="right">¥3,4256</div></td>
+										<td>2020/05/01</td>
+										<td>2020/05/30</td>
+										<td>2020/06/01 12:00:00</td>
+										<td><a href="#"><i
+												class="fas fa-info-circle icon-red"></i></a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+</nav>
+</div>
+</div>
+
+			
+
+<script type="text/javascript" >
+$('#datepicker').datepicker({
+    format: 'yyyy/mm/dd', //日付のフォーマット
+	language:'ja' ,//日本語表示
+	pickerPosition: "bottom-left"
+});
+$('#datepicker2').datepicker({
+    format: 'yyyy/mm/dd', //日付のフォーマット
+    language:'ja' //日本語表示
+});
+$('#datepicker3').datepicker({
+    format: 'yyyy/mm/dd', //日付のフォーマット
+    language:'ja' //日本語表示
+});
+$('#datepicker4').datepicker({
+    format: 'yyyy/mm/dd', //日付のフォーマット
+    language:'ja' //日本語表示
+});
+</script>

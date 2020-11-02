@@ -1,0 +1,1286 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *.
+  *= require_tree .
+ *= require_self
+ */
+ // 追加
+ @import "bootstrap-sprockets";
+ // 追加
+ @import "bootstrap";
+
+* {
+   margin: 0;
+   padding: 0;
+ }
+
+// ヘッダー・フッター
+header .navbar-brand {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.logo {
+  width: 160px;
+  height: 40px;
+}
+.dropdown-menu {
+  min-width: 0
+}
+.dropdown-border{
+  border-bottom: 1px dashed #C0C0C0;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+// 各画面共通
+.panel {
+  padding: 0
+}
+.required { // 必須項目
+}
+.required:after {
+  content: "必須";
+  color: #E00;
+  margin-left: 10px;
+  font-weight: bold;
+}
+.button_submit {
+  margin: 5px 0 0 0;
+  float: left;
+}
+.button_delete {
+  margin: 5px 0 0 15px;
+  float: left;
+}
+.button_ok { // モーダル用
+  margin: 5px 0 0 15px;
+  float: left;
+}
+.button_close { // モーダル用
+  margin: 5px 15px 0 0;
+  float: right;
+}
+.button_back {
+  margin: 5px 0 0 10px;
+}
+.attendance-edit .button_back{
+  margin: 5px 0 0 30px;
+}
+.date-select { // 日付の選択ボックス
+  height: 34px;
+  padding: 6px 6px;
+  border-radius: 4px;
+  margin-right: 6px;
+}
+
+// 印刷時の設定
+@media print{
+  .no_print {
+    display: none;
+  }
+  body {
+    margin: 0;
+  }
+}
+
+// ログイン画面
+.wrapper {
+  margin-top: 60px;
+  // margin-bottom: 20px;
+}
+
+.form-signin {
+  max-width: 420px;
+  padding: 30px 38px 66px;
+  margin: 0 auto;
+  background-color: #eee;
+  border: 3px dotted rgba(0,0,0,0.1);
+}
+
+.form-signin-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+}
+
+.login .email_field {
+  margin-bottom: 0px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.password_field {
+  margin-bottom: 20px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+// 勤怠表示・入力画面
+ .attendance_button {
+   overflow: hidden;
+}
+.button {
+  float: left;
+  margin: 0;
+}
+.button_attendance_top {
+  float: left;
+  margin: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.button_attendance_bottom {
+  float: left;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin: 20px;
+}
+.button_print {
+  margin-top: 15px;
+  margin-left: 30px;
+}
+.button_close_request {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+// 勤務表ページの今月・先月・翌月切り替えボタン
+#button_change_month {
+}
+.button_this_month {
+  margin-top: 10px;
+  margin-left: 15px;
+  float: left;
+}
+.button_prev_month {
+  margin-top: 10px;
+  margin-left: 15px;
+  float: left;
+}
+.button_next_month {
+  margin-top: 10px;
+  margin-left: 5px;
+  float: left;
+}
+
+// 定時時間設定画面
+.regular-times-edit .field{
+  margin-top: 30px;
+}
+#break-check-text{
+  color: red;
+}
+
+// ユーザ一覧画面
+#status-inviting{
+  color: red;
+}
+.status-admin{
+  color: red;
+}
+.invite-text{
+  text-align: center;
+}
+.check_square:hover{
+  cursor: pointer;
+}
+.form-control.group-select-box{
+  width: 180px;
+}
+
+// 承認者設定画面
+.not-set-superior-text{
+  color: red;
+}
+
+// 稼働日設定画面
+.is_holiday_button .is_holiday_radio{
+  float: left
+}
+.is_holiday_button .is_not_holiday_radio{
+  margin-right: 10px;
+  float: left
+}
+.is_holiday_button .field_with_errors{
+  float: left;
+}
+
+.working-day-new table{
+  display: block;
+}
+
+#is_holiday:checked + table {
+  display: none;
+}
+
+//チーム詳細画面
+.team-show-box{
+  margin-bottom: 30px;
+}
+
+.team-show table{
+  margin-left: 5%;
+}
+
+//承認者が締め承認する画面
+.close_request_approved_btn{
+  margin-right: 5%;
+  margin-bottom: 25px;
+}
+
+//承認者が勤怠削除承認する画面
+.attendance_delete_request_approved_btn{
+  margin-top: 20px;
+}
+
+//グループ管理画面
+.notify-text{
+  margin-top: 10px;
+}
+
+//個人稼働日編集申請画面
+.working-request-text{
+  color: red;
+}
+.working-request-times{
+  font-weight: 700;
+}
+.button_working_day_request{
+  margin-right: 30px;
+}
+//管理者メンバー管理の勤怠と締め確認ボタン横並び
+.button_users_index{
+  float: left;
+  display: inline-block;      /* インラインブロック要素にする */
+    padding: 5px;             /* 余白指定 */
+    height: 5px;              /* 高さ指定 */
+}
+
+//管理者メンバー検索ボタン
+.input-group.serch{
+   width: 20%;
+   margin: 0 0 0 auto;
+}
+
+//当日備考欄更新ボタン右寄せ
+.remark{
+  float: left;
+}
+//当日備考欄テキストボックスの幅
+.remark.input{
+  width: 77%;
+}
+
+//当日備考欄のラベル位置
+.remarklabel{
+  float: left;
+  padding: 5px;
+}
+
+//ユーザーチーム編集時の労働形態セレクトボックス幅
+.work_style_select{
+  width: 35%;
+}
+
+//パスワードリセットメール入力テキストボックス幅
+.in_field.email{
+    width: 50%;
+}
+
+//リアルタイム管理での勤務状態
+.working_status_red{
+  background-color: #F6D4D8;
+}
+
+.working_status_green{
+  background-color: #D1F1CC;
+}
+
+.working_status_blue{
+  background-color: #CAE7F2;
+}
+
+.working_status_gray{
+  background-color: #E3E3E3;
+}
+
+//まるめせっていの推奨文字を青くする
+.recommend{
+  font-size: small;
+  color: blue;
+}
+//-----------------------------------------
+//以下モバイル用css(個別実装用)
+
+//フッター文字中央寄
+.footer_center{
+  margin-top: 15px;
+  margin-bottom: 0px;
+  text-align: center;
+  color: #777;
+}
+
+//フッターの高さ
+.footer_hight{
+  height: 10px;
+}
+.mobile-body{
+  background-color: #f0f0f0;
+}
+
+//bodyオプション
+.mobile{
+  margin-top: 55px;
+  margin-bottom: 50px;
+ background-color: #e0e0e0;
+ font-family: Helvetica, 'Hiragino Kaku Gothic Pro', 'ヒラギノ角 Pro W3', メイリオ, Meiryo, sans-serif, verdana;
+}
+
+//メニューボタン隙間
+.pull-left.menu{
+  //margin: 5px 5px 5px 5px;	//上　右　下　左
+  margin-left: 5px;
+}
+
+//ロゴ中央寄せ（親）
+.navbar-header.centering_parent{
+  //padding: 20px;              /* 余白指定 */
+  //  background-color:  #ddd;    /* 背景色指定 */
+  //  height: 300px;              /* 高さ指定 */
+   //width: 640px;               /* 幅指定 */
+    position: relative;         /* 位置指定の基準点にする */
+    width: 100%;
+}
+
+//ロゴ中央寄席（子）
+.rogo{
+//  background-color: #2196F3;   /* 背景色指定 */
+  //  padding: 10px;               /* 余白指定 */
+position: absolute;          /* 位置指定 */
+top: 50%;                    /* 親要素の半分下にずらす */
+left: 50%;                   /* 親要素の半分右にずらす */
+transform: translateY(-50%) translateX(-50%);    /* 要素自体の半分、上と左にずらす */
+}
+
+//ハンバーガーメニューの外枠外し
+.navbar-default .navbar-toggle {
+     border: none;
+}
+
+.bell {
+  position: relative;
+}
+
+//ベル
+.bell-large{
+  font-size: 1.8em;
+  color: #333333;
+  }
+
+  .bell-badge {
+    position: absolute;
+    top: -20%;
+    left: 30%;
+    background-color: #c9182b;
+    font-size: 0.6rem;
+}
+
+//ベル寄せる
+.pull-right.bell{
+  margin: 13px 12px 0 0;	//上　右　下　左
+  }
+
+  .collapse_menu {
+    font-size: large;
+    color: #777;
+    text-decoration: none;
+      &:hover {
+        text-decoration: none;
+        color: #777;
+      }
+      &:focus {
+        text-decoration: none;
+        color: #777;
+      }
+}
+
+//名前とログアウトの色
+.drop-menu-color{
+  background-color: #c9182b;
+}
+
+//ドロップダウンメニューの名前
+.menu-name{
+  color: white;
+  display: inline-block;
+  font-size: large;
+  font-weight: bold;
+}
+
+//リストの幅
+.drop-list{
+  height: 48px;
+}
+//メニュー一覧文字
+.drop_menu_big{
+  font-size: large;
+}
+//名前の横のペンの色
+.pen-white{
+  color:#FFF;
+}
+//チーム表示の四角
+.box {
+  position     : relative;
+  margin       : 10px 0px 6px;
+  width        : 100%;
+  height       : 30px;
+  background   : #ffffff;
+}
+.box span {      /* 前面の文字エリア */
+  position     : absolute;
+  display      : inline-block;
+  background   : rgba(255, 255, 255, 0.6);
+  top          : 50%;
+  left         : 50%;
+  padding      : 3px;
+  color        : #333;
+  transform    : translate(-50%,-50%);
+  font-size    : 12pt;
+  border-radius: 5px;
+}
+
+//パネルヘッダー色
+.panel-default .panel-heading {
+    color: #333333;
+    background-color: #c9182b;
+    border-color: #ddd;
+}
+
+//パネルタイトル
+// .text-center.panel-title{
+//     color: #fff;
+//     font-weight: bold;
+//     display: inline-block;
+//     text-align: center;
+//
+// }
+
+.panel-title{
+   color: #fff;
+   font-weight: bold;
+   text-align: center;
+    display: inline-block;
+   width: 100%;
+}
+
+//ハンバーガーメニューのプルダウン選択した時の項目
+.menu_item{
+  display: inline-block;
+  font-size: large;
+  line-height: 48px;
+}
+
+//画面透過
+#gray {
+		position:			fixed;
+		top:				0;
+		left:				0;
+		height:				100%;
+		width:				100%;
+		background:			gray;
+		opacity:			0.3;
+		z-index:			1;
+    display: none;
+}
+
+//時計の文字
+#RealtimeClockArea{
+font-size:  250%;
+//font-weight: bold;
+font-weight: lighter;
+}
+
+//丸、退勤
+.circle_finish {
+  margin       : auto;
+  overflow     : hidden;
+  position     : relative;                            /* 図形のCSS */
+  width        : 271px;
+  height       : 271px;
+  background   : #c9182b;
+  border-radius: 50%;
+  transform    : rotate(0deg);
+}
+.circle_finish span {      /* 前面の文字エリア */
+  position     : absolute;
+  display      : inline-block;
+//  background   : rgba(255, 255, 255, 0.6);
+  top          : 50%;
+  left         : 50%;
+  padding      : 3px;
+  color        : #fff;
+  transform    : translate(-50%,-50%);
+  font-size    : 40pt;
+  border-radius: 5px;
+  font-weight: bolder;
+}
+
+//今日の日付
+.text-center.today{
+  color: 	#666666;
+}
+
+//出勤ボタン（大）
+.btn-circle-big-start {
+  border: none;
+  display: inline-block;
+  text-decoration: none;
+  background: #f23a3a;
+  color: #FFF;
+  width: 250px;
+  height: 250px;
+  font-size: 60px;
+  font-weight: lighter;
+  line-height: 250px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  transition: .4s;
+}
+//出勤ボタン押したときの色
+.btn-circle-big-start:hover {
+  background:   #F79393;
+  color: #FFF;
+}
+//出勤ボタンdisabledの時の色
+.btn-circle-big-start:disabled {
+  background: #82846A;
+  color: #D8D9D1;
+  pointer-events: none;//disable時のhoverを無効化
+}
+
+
+//休憩終了ボタン（小さい）
+.btn-circle-small-break_finish_mobile {
+  border: none;
+  display: inline-block;
+  text-decoration: none;
+  background: #44C662;
+  color: #fff;
+  //width: 70px;
+  //height: 70px;
+  font-size: 15px;
+  font-weight: lighter;
+  line-height: 70px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  transition: .4s;
+   position: absolute;
+   left: calc(50% - 150px); /* 150pxは適宜調整 */
+    bottom: 0;
+}
+
+//押したときの挙動
+.btn-circle-small-break_finish_mobile:hover {
+ background:   #A5E3B4;
+ color: #fff;
+}
+
+
+//ボタンやテキストボックスにフォーカスした時の青い線を消す
+:focus {
+    outline: 0;
+}
+
+
+//休憩開始ボタン（小さい）
+.btn-circle-small-break_start_mobile {
+  border: none;
+  display: inline-block;
+  text-decoration: none;
+  background: #e3f3ac;
+  color: #000000;
+  //width: 70px;
+  //height: 70px;
+  font-size: 15px;
+  font-weight: lighter;
+  line-height: 70px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  transition: .4s;
+   position: absolute;
+   left: calc(50% - 150px); /* 150pxは適宜調整 */
+     bottom: 0;
+}
+//disabledの時の挙動
+.btn-circle-small-break_start_mobile:disabled{
+background: #D3D4CA;
+color: #666666;
+opacity:1.0;
+pointer-events: none;//disable時のhoverを無効化
+}
+//押したときの挙動
+.btn-circle-small-break_start_mobile:hover {
+  background:   #EEF8D0;
+  color: #909090;
+}
+
+//退勤ボタン（大）
+.btn-circle-big-finish_time{
+  border: none;
+  display: inline-block;
+  text-decoration: none;
+  background: #c9182b;
+  color: #FFF;
+  width: 250px;
+  height: 250px;
+  font-size: 60px;
+  font-weight: lighter;
+  line-height: 250px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  transition: .4s;
+}
+//押したときの挙動
+.btn-circle-big-finish_time:hover{
+  background: #EC6272;
+  color: #FFF;
+}
+
+
+//円同士の関連付け
+.relative {
+   position: relative;
+   text-align:center;
+}
+
+//勤怠ボタンの下にあるステータス文字
+.text-center.status{
+  font-weight: bold;
+  font-size: large;
+}
+
+//今日の勤怠一覧のpaddingなくす
+.panel-body.today {
+     padding: 0px;
+}
+
+//管理者メニューアイコン
+.i-admin{
+  font-size: 1.07em;
+}
+
+//本日の勤怠ヘッダー設定
+.panel-heading.today {
+  position: relative;
+  height: 43px;
+}
+//aタグ設定
+.panel-heading.today a {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 1em; /* 好きな数値に設定してください */
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 1em; /* 好きな数値に設定してください */
+  height: 1em; /* 好きな数値に設定してください */
+  color: #fff;
+}
+
+//日付中央寄席（親）
+.list-group-item.today{
+  position: relative;
+  height: 52px;
+  background: #fff;
+}
+//日付中央寄席（子）
+.today_time{
+  display: inline-block;
+   font-size: 103%;
+  position: absolute;
+  display: inline-block;
+   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50%;
+  left: 50%;
+  -webkit-transform : translate(-50%,-50%);
+  transform : translate(-50%,-50%);
+}
+
+//休憩時間見るボタン
+.break_button{
+  border: none;
+  text-decoration: none;
+  background-color:#f23a3a;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 1em; /* 好きな数値に設定してください */
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 2.5em; /* 好きな数値に設定してください */
+    height: 2.5em; /* 好きな数値に設定してください */
+    color: #fff;
+    border-radius: 10px;
+}
+
+//時計のアイコン
+.time_icon{
+font-size: 130%;
+}
+
+
+
+//備考親
+.list-group-item{
+  position: relative;
+}
+//備考aタグ
+.remark_a{
+  font-size: large;
+  display: block;
+  position: absolute;
+  top: 0.5em;
+  right:1em;  /* 好きな数値に設定してください */
+  width: 1em; /* 好きな数値に設定してください */
+  height: 2em; /* 好きな数値に設定してください */
+}
+//備考ラベル
+.remark_label{
+  text-align: center;
+  font-size: 105%;
+}
+
+//円グラフ
+@mixin circle($size) {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - #{$size/2});
+  top: calc(50% - #{$size/2});
+  width: $size;
+  height: $size;
+}
+
+$size: 250px;
+.progress-pie-chart {
+  margin: 0px auto;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background-color: #E5E5E5;
+  position: relative;
+  &.gt-50 {
+    background-color: #44c662;
+  }
+}
+.ppc-progress {
+  @include circle($size);
+  clip: rect(0, $size, $size, #{$size/2});
+  .ppc-progress-fill {
+    @include circle($size);
+    clip: rect(0, #{$size/2}, $size, 0);
+    background: #44c662;//緑
+    transform: rotate(60deg);
+  }
+  .gt-50 & {
+    clip: rect(0, #{$size/2}, $size, 0);
+    .ppc-progress-fill {
+      clip: rect(0, $size, $size, #{$size/2});
+      background: #E5E5E5;//白
+    }
+  }
+}
+.ppc-percents {
+  @include circle(#{$size/1.15});
+  background: #fff;
+  text-align: center;
+  display: table;
+  span {
+    position: relative;
+    display: block;
+  }
+  hr{
+    width:50%;
+    margin: 0px auto;
+  }
+}
+.pcc-percents-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+//点線
+.sum_attendance_hr{
+ border-top: 1px dashed #bbb;
+}
+//残業の分数の線
+.overtime_hr{
+  margin: 0px auto;
+  width:50%;
+}
+//月合計勤務時間(文字)
+.circle_working_time{
+  font-size: large;
+}
+//月合計勤務時間(数字)
+.circle_actual_working_time{
+font-size: x-large;
+font-weight: bold;
+color:#c9182b;
+margin: 0px 0px 2px;
+}
+//月のマックス勤務時間
+.max_working_time{
+  color:#777777;
+}
+
+.overtime_month{
+  font-size: 105%;
+  text-align: center;
+  margin: 0px 0px 2px;
+}
+//残業時間赤文字
+.overtime_red{
+color:#c9182b;
+}
+
+//備考編集アイコン
+.remark_edit_icon{
+color:#f23a3a;
+}
+
+//勤怠通知設定
+
+//勤怠通知更新ボタン
+.button_custom {
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+//サクセスボタンの色
+.btn-success-custom{
+    color: #fff;
+    background-color: #44c662;
+    border-color: #44c662;
+}
+
+//通知設定注意書き
+.attention{
+  font-size:small;
+  color:#777777;
+}
+
+//グループとチームの表示
+.well_belong {
+    min-height: 20px;
+    padding: 3px;
+    margin-bottom: 5px;
+    background-color: #fff;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+//グループ切替ボタン
+.switch_group {
+  border: none;
+  text-decoration: none;
+  background-color:#f23a3a;
+    width: 2.2em; /* 好きな数値に設定してください */
+    height: 2.2em; /* 好きな数値に設定してください */
+    color: #fff;
+    border-radius: 10px;
+}
+
+.group_update{
+  text-align: center;
+}
+
+//編集申請ボタン
+.button_submit_mobile{
+margin: 0px 10px;
+}
+//削除申請ボタン
+.button_delete_mobile{
+  margin: 0px 10px;
+}
+//ボタン親div
+.update_buttons{
+  margin-top: 15px;
+  text-align:center;
+}
+
+//a親
+.panel-heading.mobile_header {
+  position: relative;
+  height: 43px;
+}
+//aタグ設定
+.panel-heading.mobile_header a {
+  display: block;
+  position: absolute;
+  font-size:large;
+//  top: 0;
+//  bottom: 0;
+//  right: 1em; /* 好きな数値に設定してください */
+//  margin-top: auto;
+//  margin-bottom: auto;
+  width: 1em; /* 好きな数値に設定してください */
+  height: 1em; /* 好きな数値に設定してください */
+  color: #fff;
+}
+
+//モバイル用アラートメッセージmargin調整
+
+//LINEアイコン色
+.line-green{
+  color: #00B900;
+}
+//メールアイコン色
+.envelope-red{
+  color: #c9182b;
+}
+
+//btn-successカスタマイズ
+.btn-success {
+  background: #44C662;//ボタンの背景色
+  color: #fff;//ボタンのテキストの色
+  border: none;//線無くす
+}
+.btn-success:hover, .btn-success:focus,
+.btn-success:active, .btn-success:active:focus, .btn-success:active:hover, .btn-success:active.focus,
+.btn-success.active, .btn-success.active:focus, .btn-success.active:hover, .btn-success.active.focus,
+.open > .dropdown-toggle.btn-success,
+.open > .dropdown-toggle.btn-success:hover,
+.open > .dropdown-toggle.btn-success:focus,
+.open > .dropdown-toggle.btn-success.focus,
+.btn-success.disabled:hover, .btn-success[disabled]:hover, fieldset[disabled] .btn-success:hover,
+.btn-success.disabled:focus, .btn-success[disabled]:focus, fieldset[disabled] .btn-success:focus,
+.btn-success.disabled.focus, .btn-success[disabled].focus, fieldset[disabled] .btn-success.focus {
+    background: #A5E3B4; //ボタンの上にポインタを持ってきたり、クリックしたりした時の背景色
+    color: #909090; //ボタンの上にポインタを持ってきたり、クリックしたりした時のテキストの色
+    outline:0; //周りの青い線消す
+}
+
+//btn-dangerカスタマイズ（濃い赤)
+.btn-danger {
+  background: #c9182b;//ボタンの背景色
+  color: #FFF;//ボタンのテキストの色
+  border: none;//線無くす
+}
+.btn-danger:hover, .btn-danger:focus,
+.btn-danger:active, .btn-danger:active:focus, .btn-danger:active:hover, .btn-danger:active.focus,
+.btn-danger.active, .btn-danger.active:focus, .btn-danger.active:hover, .btn-danger.active.focus,
+.open > .dropdown-toggle.btn-danger,
+.open > .dropdown-toggle.btn-danger:hover,
+.open > .dropdown-toggle.btn-danger:focus,
+.open > .dropdown-toggle.btn-danger.focus,
+.btn-danger.disabled:hover, .btn-danger[disabled]:hover, fieldset[disabled] .btn-danger:hover,
+.btn-danger.disabled:focus, .btn-danger[disabled]:focus, fieldset[disabled] .btn-danger:focus,
+.btn-danger.disabled.focus, .btn-danger[disabled].focus, fieldset[disabled] .btn-danger.focus {
+    background: #EC6272; //ボタンの上にポインタを持ってきたり、クリックしたりした時の背景色
+    color: #fff; //ボタンの上にポインタを持ってきたり、クリックしたりした時のテキストの色
+    outline:0; //周りの青い線消す
+}
+
+//アラートマージンボトム調整
+//>>>>>>> bc77840a51914666aa1cad9017f7c844eea54ed2
+.alert {
+    padding: 15px;
+    margin-bottom: 5px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.icon_person {
+  width: 40px;
+  height: 40px;
+}
+
+.new_button_mobile{
+  border: none;
+  display: inline-block;
+  text-decoration: none;
+  background: #f23a3a;
+  color: #FFF;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  font-weight: bolder;
+  line-height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  transition: .4s;
+}
+.new_button_mobile:hover {
+  background:   #F79393;
+}
+
+.exist_button_mobile{
+  border: none;
+  display: inline-block;
+  text-decoration: none;
+background: #f23a3a;
+  color: #FFF;
+  width: 14px;
+  height: 14px;
+  font-size: 12px;
+  font-weight: bolder;
+  line-height: 15px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  transition: .4s;
+}
+.exist_button_mobile:hover{
+  background:   #F79393;
+}
+.white{
+  background:   #fff;
+}
+//グループ切替セレクトボックスのmargin
+.select_group{
+  margin-bottom: 0;
+}
+//カレンダーモーダル内スクロールバー
+.day_attendance{
+  overflow-y: scroll;
+  /*縦方向はスクロール可*/
+  overflow-x: hidden;
+  /*横方向はスクロール不可*/
+  height:30em;
+}
+//編集不可アイコン
+.icon-disabled{
+  //color: #f8b24f;
+  color: #44c662;
+}
+//編集可能アイコン
+.icon-can-edit{
+  color: #44c662;
+}
+.icon-new{
+  color: #999999;
+}
+//月別合計遷移ボタン
+.link_attendance_sum{
+  display: inline-block;
+  background-color: #fff;
+  text-align: left;
+  border: 1px solid #c9182b;
+  font-size: 16px;
+  color: #c9182b;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 25px;
+  transition: .4s;
+  width:280px;
+  height:50px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+.link_attendance_sum:hover{
+  background:   #EC6272;
+  border-color: #c9182b;
+  color: #FFF;
+}
+//カレンダーモーダル内備考親
+.remark_td{
+    position: relative;
+}
+//カレンダーモーダル内項目背景色
+.calender_mordal_td{
+  background:   #e3f3ac;
+}
+//月別合計勤務時間月文字大きさ
+.total_month_title{
+  font-size: large;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+.month_well {
+  //width: 170px;
+    min-height: 0px;
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: #fff;
+    border-top: solid 1px #c9182b;/*上線*/
+    border-bottom: solid 1px #c9182b;/*下線*/
+    //border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.monthly_sum_attendance{
+  padding: 5px;
+}
+.grape_and_button{
+  padding: 5px;
+}
+table.vacation_type{
+  table-layout: fixed;
+  width: 90%;
+  margin-left: 7%;
+  margin-right: 3%;
+  th{
+    text-align: center;
+    font-weight: normal;
+  }
+  .name{
+    width: 80%;
+    padding-left: 15%;
+  }
+  td.name{
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+  }
+  .icon1{
+    width: 10%;
+  }
+  td.icon1{
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+  }
+  .icon2{
+    width: 10%;
+  }
+  td.icon2{
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+  }
+}
+table.paid_init{
+  table-layout: fixed;
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+  th{
+    font-size: 10px;
+  }
+  td{
+    font-size: 10px;
+  }
+}
+
+table.overtime_request_histories{
+  th{
+    font-size: 10px;
+  }
+  td{
+    font-size: 10px;
+    button{
+      font-size: 10px;
+    }
+  }
+}
+
+.input_group{
+  margin-bottom: 0;
+  font-size: 103% ;
+}
+
+table.remarks{
+  td {
+    border: none;
+}
+th {
+  border: none;
+}
+}
+
+.no_margin_buttom{
+margin-bottom: 0;
+}
+
+
+//個人稼働日リスト
+.list-group-item-workday{
+  position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    /* background-color: #fff; */
+    border: 1px solid #ddd;
+}
+a.list-group-item-workday, button.list-group-item-workday {
+    color: #555;
+    text-decoration: none;
+}
+
+a.list-group-item-workday:hover {
+text-decoration: none;
+}
+
+.table.workday_table{
+margin-bottom: 3px;
+}
+
+.button_this_month_workday {
+  margin-top: 10px;
+  margin-left: 0px;
+  float: left;
+}
+
+.personal_workday_button{
+  display: block;
+   margin: 0 0 0 auto;
+}
+
+.well_workday_color {
+    min-height: 20px;
+    padding: 3px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    background-color: #fff;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.button_working_day_request_mobile{
+  margin-right: 15px;
+}
+
+//個人稼働日関連セレクトボックス
+.form-control-workday-select {
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #555555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}

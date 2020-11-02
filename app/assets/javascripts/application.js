@@ -17,3 +17,6 @@
 //= require_tree .
 //= require bootstrap-sprockets
 // = require data-confirm-modal
+//= require jquery_ujs
+//= require jquery-ui/widgets/datepicker
+//= require jquery-ui/i18n/datepicker-ja

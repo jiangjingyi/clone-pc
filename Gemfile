@@ -78,4 +78,8 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
+
+gem "font-awesome-rails"
+gem 'font-awesome-sass', '~> 5.8.1'
+
 end

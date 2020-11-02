@@ -1,0 +1,261 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed"
+				data-toggle="collapse" data-target="#navbarEexample">
+				<span class="sr-only">Toggle navigation</span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"> <i class="fas fa-calculator"></i>
+				経費精算
+			</a>
+		</div>
+
+		<div class="collapse navbar-collapse" id="navbarEexample">
+			<ul class="nav navbar-nav">
+				<li><a href="#">ホーム</a></li>
+
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown"><a href="#" class="dropdown-toggle"
+					data-toggle="dropdown" role="button">田中一郎 <span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="#">ここにリンク</a></li>
+						<li><a href="#">ここにリンク</a></li>
+						<li><a href="#">ログアウト</a></li>
+					</ul></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<nav>
+	<div></div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="col-md-6 col-md-offset-3">
+					<div class="panel panel-default company-and-name">
+						<div class="panel-body">
+							<span class="glyphicon glyphicon-briefcase icon-red large-font"
+								aria-hidden="true"></span> <span class="large-font">&nbsp<label>チーム名：</label>エイ・クリエイション
+							</span> <br> <span
+								class="glyphicon glyphicon-user icon-red large-font"
+								aria-hidden="true"></span> <span class="large-font">&nbsp<label>氏名：</label>田中一郎
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr class="top-hr">
+
+			<div class="col-md-12">
+				<a href="#">精算一覧</a><span class="glyphicon glyphicon-chevron-right"
+					aria-hidden="true"></span><a href="#">精算編集</a>
+			</div>
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-heading panel-header-custom">
+						<p class="text-center white-font">精算編集</p>
+					</div>
+					<div class="panel-body">
+						<div class="">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<div class="col-md-12">
+										<h4>
+											<i class="fas fa-file-invoice-dollar yellow"></i> 現在の精算情報
+										</h4>
+									</div>
+									<div class="col-md-12">
+										<div class="alert alert-info" role="alert">
+                     <!-- ステータスによってこの部分変えてください
+                      申請済み（黄）
+                      <div class="alert alert-warning" role="alert">
+                      申請中（赤）
+                      <div class="alert alert-danger" role="alert">
+                      承認済み（緑）
+                      <div class="alert alert-success" role="alert">
+                      -->
+											<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                      <!--ステータスによって状態の文字も変えます（文字色は勝手に変わります）↓ -->
+											保存済み
+										</div>
+									</div>
+									<div class="col-md-12">
+										<table class="table table-bordered">
+											<thead>
+
+											</thead>
+											<tbody>
+												<tr>
+													<td><label>期間</label></td>
+													<td>2019/01/01~2019/01/31</td>
+												</tr>
+												<tr>
+													<td><label>合計金額</label></td>
+													<td>¥3,600</td>
+												</tr>
+												<tr>
+													<td><label>申請日</label></td>
+													<td></td>
+												</tr>
+												<tr>
+													<td><label>更新日</label></td>
+													<td>2018/12/23 12:44:23</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+
+									<br>
+									<hr class="edit-hr">
+									<div class="col-md-12">
+										<h4>
+											<i class="fas fa-edit icon-red"></i> 編集
+										</h4>
+										<div class="col-md-12"></div>
+										<div class="col-md-12">
+											<label class="checklabel">状況</label>
+											<div class="checklabel">
+												<select class="form-control left20">
+													<option value="0" selected="selected">保存</option>
+													<option value="1">申請</option>
+												</select>
+											</div>
+
+											<span class="checklabel message">※申請する場合は申請を選択</span> <br>
+											<div class="col-md-12">
+												<br>
+												<button type="button" class="btn btn-default checklabel">更新</button>
+												<button type="button" class="btn btn-danger left20"
+													data-toggle="modal" data-target="#sampleModal">
+													<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+													削除
+												</button>
+												<!-- モーダル・ダイアログ -->
+												<div class="modal fade" id="sampleModal" tabindex="-1">
+													<div class="modal-dialog">
+														<div class="modal-content">
+															<div class="modal-header">
+																<button type="button" class="close" data-dismiss="modal">
+																	<span>×</span>
+																</button>
+																<h4 class="modal-title">明細削除</h4>
+															</div>
+															<div class="modal-body">
+																2019/01/01~2019/01/31の精算を削除しますか？ <br>
+																<p class="icon-red">※明細も同時に削除されます</p>
+															</div>
+															<div class="modal-footer">
+																<button type="button" class="btn btn-default"
+																	data-dismiss="modal">戻る</button>
+																<button type="button" class="btn btn-danger">削除</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>										
+									</div>
+								</div>
+
+
+
+
+
+
+								<div class="col-md-12">
+									<br>
+									<h4 class="checklabel">
+										<span><i class="fas fa-hand-holding-usd yellow"></i></span>
+										明細詳細
+									</h4>
+									<div class="text-right">
+										<button class="btn btn-warning">
+											<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+											マイデータから明細作成
+										</button>
+										<button class="btn btn-info">
+											<span class="glyphicon glyphicon-plus-sign"
+												aria-hidden="true"></span> 新規明細作成
+										</button>
+									</div>
+								</div>
+								<div class="col-md-12">
+
+									<table class="table table-striped">
+										<thead>
+											<tr>
+												<th><span class="glyphicon glyphicon-star mouse orange"
+													aria-hidden="true" title="マイデーター登録済みチェック"></span></th>
+												<th>日付</th>
+												<th>交通機関</th>
+												<th>行先</th>
+												<th>要件</th>
+												<th>乗車区間(from)</th>
+												<th>乗車期間(to)</th>
+												<th>運賃(税込)</th>
+												<th>備考</th>
+												<th></th>
+												<th></th>
+												<th></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><span class="glyphicon glyphicon-ok green"
+													aria-hidden="true"></span></td>
+												<td>2019/01/07</td>
+												<td><div>電車</div></td>
+												<td>池袋</td>
+												<td>本社出社のため</td>
+												<td>横浜</td>
+												<td>池袋</td>
+												<td><div class="right">¥600</div></td>
+												<td>片道料金</td>
+												<td><a href="#"><i class="fas fa-edit icon-red"></i></a></td>
+												<td><a href="#"><span
+														class="glyphicon glyphicon-file icon-red"
+														aria-hidden="true"></span></a></td>
+												<td><a href="#"><span
+														class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td>
+											</tr>
+											<tr>
+												<td></td>
+												<td>2019/01/07</td>
+												<td><div>タクシー</div></td>
+												<td>大阪支社</td>
+												<td>車でないといけない場所のため</td>
+												<td>新大阪</td>
+												<td>大阪支社</td>
+												<td><div class="right">¥1,900</div></td>
+												<td>片道料金</td>
+												<td><a href="#"><i class="fas fa-edit icon-red"></i></a></td>
+												<td><a href="#"><span
+														class="glyphicon glyphicon-file icon-red"
+														aria-hidden="true"></span></a></td>
+												<td><a href="#"><span
+														class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td>
+
+											</tr>
+
+										</tbody>
+									</table>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
+
+
+
+
+

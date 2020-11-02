@@ -1,0 +1,101 @@
+// Place all the styles related to the expence controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.top-hr{
+    margin-top: 200px;
+     height: 1px;
+   background-color: #cccccc;
+   }
+   body{
+    background-color: #f0f0f0;
+   }
+   .panel.panel-default.company-and-name{
+     margin-top: 80px; 
+   }
+   .icon-red{
+     color: #f23a3a;
+   }
+   .large-font{
+   font-size: large; 
+   }
+   .pagination{
+     margin : 10px 10px;
+   }
+   
+   .large{
+     
+   }
+   
+   .new{
+     margin-bottom: 10px;
+   }
+   
+   .panel-heading.panel-header-custom{
+        background-color: #c9182b;
+       border-color: #ddd;
+       position: relative;
+       height: 43px; 
+   }
+   
+   .text-center.panel-title-custom{
+     color: #fff;
+      font-weight: bold;
+       font-size: 16px;
+      text-align: center;
+       display: inline-block;
+      width: 100%;
+   }
+   .white-font{
+     color:  #fff;
+     font-weight: bold;
+     font-size: large;
+   }
+   .box26 {
+       position: relative;
+       margin: 2em 0;
+       padding: 0.5em 1em;
+       border: solid 3px #f23a3a;
+       border-radius: 8px;
+     
+   }
+   
+   label{margin-left: 20px;}
+   #datepicker{width:180px; margin: 0 20px 20px 20px;}
+   #datepicker > span:hover{cursor: pointer;}
+   
+   #datepicker2{width:180px; margin: 0 20px 20px 20px;}
+   #datepicker2 > span:hover{cursor: pointer;}
+   
+   .checklabel{
+    float: left;
+   }
+   .date{
+    float: left; 
+   }
+   .filter-text{
+     font-size: 15px;
+   }
+   .right{
+     text-align: right;
+   }
+   .icon-gray{
+     color: #999999;
+     cursor: not-allowed;
+   }
+   .blue{color: #004fcf}
+   .green{color:#44C662}
+   .orange{color:#E59100}
+
+   .left20{
+    margin-left :20px; 
+  }
+
+  .message{
+    margin-left :25px;  
+    margin-buttom: 10px;
+ }
+ 
+ .yellow{
+  color: #ffd700;
+ }

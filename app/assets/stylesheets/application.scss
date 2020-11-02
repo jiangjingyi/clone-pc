@@ -10,8 +10,27 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require_self
+ *= require scaffolds.css
+ *= require_tree .
+ 
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ 
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
+
+ .datepicker-dropdown {
+    margin-top: 100px;
+    }
+    
+    input[readonly].datepicker{
+      background-color: #ffffff;
+      cursor: default;
+    }
+    
+    input[disabled].datepicker{
+        background:#eeefef;
+        cursor:not-allowed;
+    }
